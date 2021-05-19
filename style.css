@@ -1,0 +1,22 @@
+.loader {
+  position: absolute;
+  top: calc(50vh - 10px);
+  left: calc(50vw - 10px);
+  height: calc((100vh + 100vw) / 50);
+  width: calc((100vh + 100vw) / 50);
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.6);
+  border-right: 5px solid rgba(0, 0, 0, 0.2);
+  border-left: 5px solid black;
+  animation: moveLoader 0.4s linear infinite;
+  border-radius: 50%;
+}
+
+@keyframes moveLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
