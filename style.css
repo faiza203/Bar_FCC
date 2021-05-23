@@ -1,22 +1,76 @@
-.loader {
-  position: absolute;
-  top: calc(50vh - 10px);
-  left: calc(50vw - 10px);
-  height: calc((100vh + 100vw) / 50);
-  width: calc((100vh + 100vw) / 50);
-  border-top: 5px solid #fff;
-  border-bottom: 5px solid rgba(0, 0, 0, 0.6);
-  border-right: 5px solid rgba(0, 0, 0, 0.2);
-  border-left: 5px solid black;
-  animation: moveLoader 0.4s linear infinite;
-  border-radius: 50%;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes moveLoader {
-  0% {
-    transform: rotate(0deg);
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto';
+  background-color: #708090;
+  background-size: 64px 128px;
+}
+.main .container {
+  height: 560px;
+  width: 900px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 20px 20px;
+  align-self: center;
+  position: relative;
+}
+@media (min-width: 1000px) {
+  .main .container {
+    box-shadow: 2px 2px 20px;
   }
-  100% {
-    transform: rotate(360deg);
-  }
+}
+.main .container #title {
+  text-align: center;
+  font-size: 2.5em;
+}
+.main .container .visHolder {
+  position: absolute;
+  top: 6em;
+}
+
+#tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  padding: 2px;
+  font: 12px;
+  background: lightsteelblue;
+  box-shadow: 1px 1px 10px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  background: #fff;
+  pointer-events: none;
+}
+
+#y-axis path {
+  stroke: black;
+  stroke-width: 1;
+  fill: none;
+}
+
+#x-axis path {
+  stroke: black;
+  stroke-width: 1;
+  fill: none;
+}
+
+.info {
+  font-size: 0.8em;
 }
